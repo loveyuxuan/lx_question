@@ -1,0 +1,21 @@
+require(['../scss/main.scss']);
+require('./main');
+$(".choose").on("click","span",function(){
+    $(this).addClass("active").siblings().removeClass("active");
+    if($(this).index()==1){
+        $(".items").show();
+    }else{
+         $(".items").hide();
+    }
+})
+$('.items').on("click","span",function(){
+    if($(this).hasClass("active")){
+        $(this).removeClass("active");
+    }else{
+        $(this).addClass("active");
+    }
+    
+})
+$(".continue-btn").on("click",function(){
+    window.location.href="allergy.html";
+})

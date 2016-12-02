@@ -1,0 +1,20 @@
+require(['../scss/main.scss','./main']);
+$(".choosefood").on("click","span",function(){
+    $(this).addClass("active").siblings().removeClass("active");
+    if($(this).index()==1){
+        $(".items").show();
+    }else{
+         $(".items").hide();
+    }
+})
+$('.itemsfood').on("click","span",function(){
+    if($(this).hasClass("active")){
+        $(this).removeClass("active");
+    }else{
+        $(this).addClass("active");
+    }
+    
+})
+$(".continue-btn2").on("click",function(){
+    window.location.href="basicInfo.html";
+})
